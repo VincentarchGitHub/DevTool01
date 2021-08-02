@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ref num:</strong>
+  <%= @project.ref_num %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @project.postcode %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @project.published %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @project.published_at %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+<%= link_to "Add Post", new_project_post_path(project_id: @project.id) %>
+
+<%= render @project.posts %>
